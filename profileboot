@@ -1,0 +1,50 @@
+#!/bin/sh
+
+function suckless(){
+    git clone $repo
+    dir=$(echo $repo | cut -d'/' -f5)
+    cd $dir
+    sudo make install
+    cd ~
+}
+
+cd ~
+
+read -p "Confirm that SSH is setup. Press any key to continue" trash
+
+#TODO:replace https for ssh
+
+#Pull dotfiles and personal repos
+
+#git clone https://github.com/gtLara/dot.git
+#git clone https://github.com/gtLara/ssh.git
+#git clone https://github.com/gtLara/dwm-bar.git
+
+#Install stuff
+
+#Pacman
+
+pacman=(
+imagemagick
+mpv
+dunst
+sxiv
+)
+
+# sudo pacman -S ${pacman[*]}
+
+#git clone https://aur.archlinux.org/yay.git ; cd yay ; makepkg -si; cd ~
+
+yay=(
+spotify-tui
+)
+
+# yay -S ${yay[*]}
+
+#Git
+
+builds="https://github.com/LukeSmithxyz/"
+
+for r in "st" "dwm" "dmenu"; do repo=$builds$r; suckless; done
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh; #TODO: include conda envs? 
