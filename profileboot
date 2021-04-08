@@ -12,39 +12,65 @@ cd ~
 
 read -p "Confirm that SSH is setup. Press any key to continue" trash
 
-#TODO:replace https for ssh
-
 #Pull dotfiles and personal repos
 
-#git clone https://github.com/gtLara/dot.git
-#git clone https://github.com/gtLara/ssh.git
-#git clone https://github.com/gtLara/dwm-bar.git
+git clone git@github.com:gtLara/dot.git
+git clone git@github.com:gtLara/dwm-bar.git
 
 #Install stuff
 
-#Pacman
+Pacman
 
 pacman=(
 imagemagick
 mpv
+alsa-utils
 dunst
 sxiv
+unclutter
+sxhkd
 )
 
-# sudo pacman -S ${pacman[*]}
+sudo pacman -S ${pacman[*]}
 
-#git clone https://aur.archlinux.org/yay.git ; cd yay ; makepkg -si; cd ~
+git clone https://aur.archlinux.org/yay.git ; cd yay ; makepkg -si; cd ~
 
 yay=(
-spotify-tui
+ntfs-3g
 )
 
-# yay -S ${yay[*]}
+yay -S ${yay[*]}
 
-#Git
+# Suckless
 
 builds="https://github.com/LukeSmithxyz/"
 
 for r in "st" "dwm" "dmenu"; do repo=$builds$r; suckless; done
 
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh; #TODO: include conda envs? 
+ mkdir .suckless
+ mv st dwm dmenu dwm-bar .suckless
+
+# Conda
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh;
+
+# Vim Plug
+
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# Zsh plugs
+
+sudo mkdir -p /usr/share/zsh/plugins
+mkdir temp
+cd temp
+git clone git@github.com:zsh-users/zsh-history-substring-search.git
+git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
+git clone git@github.com:zsh-users/zsh-autosuggestions.git
+
+sudo mv zsh-history-substring-search /usr/share/zsh/plugins
+sudo mv zsh-syntax-highlighting /usr/share/zsh/plugins
+sudo mv zsh-autosuggestions /usr/share/zsh/plugins
+
+cd ../
+rm -rf temp
