@@ -29,6 +29,7 @@ dunst
 sxiv
 unclutter
 sxhkd
+chromium # for brave
 bluez #todo: get bluetooth right lol
 bluez-utils
 pulseaudio
@@ -40,7 +41,8 @@ sudo pacman -S ${pacman[*]}
 git clone https://aur.archlinux.org/yay.git ; cd yay ; makepkg -si; cd ~
 
 yay=(
-ntfs-3g
+brave
+ntfs-3g # for seagate mount
 )
 
 yay -S ${yay[*]}
