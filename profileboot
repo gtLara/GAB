@@ -29,6 +29,10 @@ dunst
 sxiv
 unclutter
 sxhkd
+bluez #todo: get bluetooth right lol
+bluez-utils
+pulseaudio
+pulseaudio-bluetooth
 )
 
 sudo pacman -S ${pacman[*]}
