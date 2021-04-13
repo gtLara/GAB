@@ -23,17 +23,23 @@ Pacman
 
 pacman=(
 imagemagick
+unzip
 mpv
 alsa-utils
 dunst
 sxiv
 unclutter
 sxhkd
+zathura
+zathura-pdf-poppler
 chromium # for brave
 bluez #todo: get bluetooth right lol
 bluez-utils
 pulseaudio
 pulseaudio-bluetooth
+realtime-privileges
+jack2
+cadence
 )
 
 sudo pacman -S ${pacman[*]}
