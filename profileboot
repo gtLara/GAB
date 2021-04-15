@@ -22,24 +22,27 @@ git clone git@github.com:gtLara/dwm-bar.git
 Pacman
 
 pacman=(
+wget
 imagemagick
-unzip
 mpv
 alsa-utils
 dunst
 sxiv
 unclutter
-sxhkd
+sxhkd # simple x hotkey daemon
 zathura
-zathura-pdf-poppler
+zathura-pdf-poppler # zathura pdf extension
 chromium # for brave
 bluez #todo: get bluetooth right lol
 bluez-utils
 pulseaudio
 pulseaudio-bluetooth
-realtime-privileges
+realtime-privileges # supercollider stuff
 jack2
 cadence
+zip # compression stuff
+unzip
+unrar
 )
 
 sudo pacman -S ${pacman[*]}
