@@ -29,7 +29,6 @@ alsa-utils
 dunst
 sxiv
 unclutter
-sxhkd # simple x hotkey daemon
 zathura
 zathura-pdf-poppler # zathura pdf extension
 chromium # for brave
@@ -50,6 +49,7 @@ sudo pacman -S ${pacman[*]}
 git clone https://aur.archlinux.org/yay.git ; cd yay ; makepkg -si; cd ~
 
 yay=(
+sxhkd # simple x hotkey daemon
 brave
 ntfs-3g # for seagate mount
 )
