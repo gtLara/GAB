@@ -18,7 +18,6 @@ git clone git@github.com:gtLara/dot.git
 git clone git@github.com:gtLara/dwm-bar.git
 
 #Install stuff
-
 Pacman
 
 pacman=(
@@ -74,7 +73,14 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh;
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-# Zsh plugs
+# Zsh stuff
+
+# setting shared history file
+
+mkdir -p ~/.cache/zsh
+touch -p ~/.cache/zsh/zhist
+
+# setting plugs
 
 sudo mkdir -p /usr/share/zsh/plugins
 mkdir temp
