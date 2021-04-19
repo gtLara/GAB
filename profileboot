@@ -21,6 +21,7 @@ git clone git@github.com:gtLara/dwm-bar.git
 Pacman
 
 pacman=(
+xclip
 wget
 imagemagick
 mpv
@@ -51,6 +52,7 @@ yay=(
 sxhkd # simple x hotkey daemon
 brave
 ntfs-3g # for seagate mount
+neovim
 )
 
 yay -S ${yay[*]}
