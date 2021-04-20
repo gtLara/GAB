@@ -42,6 +42,7 @@ cadence
 zip # compression stuff
 unzip
 unrar
+texlive-most
 )
 
 sudo pacman -S ${pacman[*]}
@@ -52,7 +53,8 @@ yay=(
 sxhkd # simple x hotkey daemon
 brave
 ntfs-3g # for seagate mount
-neovim
+neovim # from aur to enable +clipboard
+sc-im # terminal spreadsheet stuff
 )
 
 yay -S ${yay[*]}
