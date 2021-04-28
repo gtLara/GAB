@@ -43,9 +43,12 @@ zip # compression stuff
 unzip
 unrar
 texlive-most
+ntp # time daemon
 )
 
 sudo pacman -S ${pacman[*]}
+
+# TODO: configure daemons
 
 git clone https://aur.archlinux.org/yay.git ; cd yay ; makepkg -si; cd ~
 
