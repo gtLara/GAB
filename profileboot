@@ -14,11 +14,11 @@ read -p "Confirm that SSH is setup. Press any key to continue" trash
 
 #Pull dotfiles and personal repos
 
-git clone git@github.com:gtLara/dot.git
-git clone git@github.com:gtLara/dwm-bar.git
+#git clone git@github.com:gtLara/dot.git
+#git clone git@github.com:gtLara/dwm-bar.git
 
 #Install stuff
-Pacman
+#Pacman
 
 pacman=(
 xclip
@@ -44,9 +44,11 @@ unzip
 unrar
 texlive-most
 ntp # time daemon
+zsh
+flameshot
 )
 
-sudo pacman -S ${pacman[*]}
+sudo pacman -S --needed ${pacman[*]}
 
 # TODO: configure daemons
 
@@ -54,7 +56,7 @@ git clone https://aur.archlinux.org/yay.git ; cd yay ; makepkg -si; cd ~
 
 yay=(
 sxhkd # simple x hotkey daemon
-brave
+#brave
 ntfs-3g # for seagate mount
 neovim # from aur to enable +clipboard
 sc-im # terminal spreadsheet stuff
