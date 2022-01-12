@@ -44,8 +44,9 @@ unzip
 unrar
 texlive-most
 ntp # time daemon
-zsh
-flameshot
+zsh # if missing crashes at terminal setup !
+flameshot # find better tool ...
+gnumeric # convert xlsx to csv
 )
 
 sudo pacman -S --needed ${pacman[*]}
